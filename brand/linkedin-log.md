@@ -32,3 +32,33 @@ Se você tirasse R$ 5 mil do seu tráfego no mês que vem, saberia dizer quanto 
 
 (A situação eu vejo direto. Nomes e números foram trocados.)
 ```
+
+## 2026-10-20 07:55 (Brasília) - #21 Direct Value (ENSINO)
+
+- Tema: pró-labore de 1 salário mínimo + retirada mensal com critério
+- Primeira linha: Aqui tá a regra que a maioria dos meus clientes usa pra parar de tirar dinheiro da empresa "quando dá". Pode copiar.
+- Tamanho: 1.084 caracteres
+- Resultado: {{preencher depois: impressões, reações, comentários}}
+
+```
+Aqui tá a regra que a maioria dos meus clientes usa pra parar de tirar dinheiro da empresa "quando dá". Pode copiar.
+
+Ela tem duas partes, e o que resolve é justamente separar uma da outra.
+
+1. Pró-labore fixo de 1 salário mínimo.
+É o seu salário como sócio que trabalha no negócio. Mesmo valor, mesma data, todo mês. Entra no planejamento como qualquer outra conta.
+
+2. Retirada mensal com critério.
+O restante sai como retirada, e o valor varia conforme:
+- o faturamento do mês
+- o percentual de cada sócio no negócio
+- o tipo de trabalho que cada um executa
+
+Quando o sócio tira "quando dá", ninguém sabe se a empresa tá dando lucro ou sendo esvaziada aos poucos. O caixa vira conta pessoal e a DRE para de dizer a verdade.
+
+Com a regra, cada real que sai tem nome. Você olha o mês e sabe quanto o negócio gerou de fato, e quanto ficou pra crescer.
+
+Um cuidado: o tratamento do pró-labore e da retirada no imposto depende do regime da sua empresa. Antes de mudar, alinha com o seu contador.
+
+Na sua empresa, hoje, a retirada dos sócios segue alguma regra ou ainda é no "quando dá"?
+```
