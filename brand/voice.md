@@ -29,8 +29,10 @@ nunca inventam essas informações.
   e profissionais liberais sobrecarregados com tarefas administrativas.
 - **O que eu vendo (Leme Norte):** BPO financeiro (contas a pagar e receber, conciliação
   bancária, fluxo de caixa, DRE gerencial, emissão de notas e boletos, organização
-  de documentos para o contador). `{{confirme se a Leme Norte também oferece
-  assistente virtual / secretária remota}}`
+  de documentos para o contador). **Só BPO financeiro.** Assistente virtual é
+  coisa da época da Temporis; não oferecer nos posts.
+- **Reunião de Rota:** reunião periódica com o cliente onde apresentamos os
+  números e sugerimos as decisões. Nome próprio do serviço; usar assim.
 - **Idioma:** português do Brasil.
 
 ## Como eu soo
@@ -90,7 +92,8 @@ Coisas em que acredito e que parte do meu público não acredita:
 
 ## Fora dos limites
 
-- **Assuntos sobre os quais não posto:** `{{preencher, se houver}}`
+- **Assuntos sobre os quais não posto:** nenhuma restrição dentro do nicho
+  (finanças, gestão, BPO, empreendedorismo digital).
 - **Clientes e pessoas:** nunca citar nomes reais nem qualquer detalhe que permita
   identificar um cliente ou uma pessoa (segmento muito específico, cidade,
   faturamento exato, nome de produto, data marcante), salvo autorização expressa.
@@ -114,15 +117,35 @@ Fatos reais que posso assinar. Se faltar número, o rascunho volta com
 - Os pedidos estranhos que já recebemos: vender vestido de noiva, ser
   intermediário entre sócios que não se falavam, montar trilha sonora de festa,
   pedir potinho de coleta de exame na farmácia para um cliente. (Sem nomes.)
-- `{{um caso real com número, sem identificar o cliente: horas economizadas,
-  custo reduzido, erro evitado}}`
+### Casos do site (reais, adaptados)
 
-### Casos ilustrativos do site
+Os cases do site da Leme Norte são situações comuns entre os negócios que
+atendemos, com **nomes e números fictícios**. Regra para os posts: dá pra contar
+a história, mas sempre deixando claro que é uma situação típica com dados
+alterados (ex.: "uma situação que vejo direto; nomes e números trocados").
+Nunca apresentar como "um cliente nosso faturou X" nem como resultado
+verificável.
 
-Os cases do site da Leme Norte são situações hipotéticas baseadas na realidade.
-Podem ser usados nos posts **só se apresentados como exemplo** ("imagine um
-e-commerce que..."), nunca como "um cliente nosso" ou resultado real.
+**E-commerce de cosméticos naturais** (o mais próximo da realidade;
+https://lemenorte.com.br/bpo-financeiro-para-ecommerce)
 
-- **E-commerce** (o mais próximo da realidade):
-  https://lemenorte.com.br/bpo-financeiro-para-ecommerce
-  `{{colar aqui o texto do case: situação, o que foi feito, números}}`
+- **Antes:** Carla tem uma marca de cosméticos naturais vendida pela internet,
+  faturamento de R$ 2,5 milhões por ano. Dois produtos respondiam pela maior
+  parte das vendas, mas a empresa fechava a maioria dos meses no negativo.
+- **O problema:** a fabricante terceirizada ficava com cerca de 40% de cada venda
+  e exigia compra mínima para manter o estoque. Taxas de antecipação, comissões
+  de afiliados e influenciadores e um desconto progressivo sem conta feita
+  consumiam boa parte do resto. Vendas canceladas continuavam com nota válida,
+  as contas atrasavam e a sócia retirava dinheiro quando dava.
+- **O que fizemos:** mapeamos o ciclo de venda da fabricante ao banco, montamos
+  a DRE por produto e por kit e definimos um pró-labore fixo. Na Reunião de
+  Rota, sugerimos renegociar a comissão dos afiliados, corrigir a tabela de
+  descontos e testar um corte de R$ 5 mil por mês no tráfego pago.
+- **Depois:** o corte no tráfego não mudou o volume de vendas e economizou
+  R$ 60 mil no ano. Com a nova comissão dos afiliados, a tabela de descontos
+  corrigida e as contas em dia, a empresa saiu de um prejuízo de R$ 70 mil para
+  um lucro de R$ 120 mil no ano.
+- **Ângulos de post que saem daqui:** faturar R$ 2,5 mi e fechar no vermelho;
+  o desconto progressivo "sem conta feita"; cortar R$ 5 mil de tráfego e as
+  vendas não caírem (o não-óbvio); nota de venda cancelada que continua válida;
+  sócia que retira "quando dá" vs. pró-labore fixo; DRE por produto e por kit.
