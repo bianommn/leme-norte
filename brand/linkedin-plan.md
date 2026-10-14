@@ -34,8 +34,9 @@ o que entra e o que não entra, e como funciona a Reunião de Rota.
 
 ## Interação (5 alcance / 3 pares / 2 compradores)
 
-- Alcance (5): `{{preencher}}` criadores de conteúdo sobre e-commerce,
-  infoprodutos e gestão financeira de PMEs, com público de donos de negócio.
+- Alcance (5): 4Blue Gestão Empresarial, Conta Azul, Ricardo Amorim, Josef
+  Rubin, Rafael Rez. Ative o sino de notificação nos perfis de Ricardo Amorim e
+  Josef Rubin: os posts deles passam de 20 comentários em minutos.
 - Pares (3): Thiago Navarro, Aleksander Avalca, Fabiola A Haffner.
 - Compradores (2): Daniel Tutida, Tatiana Violaro Bellini. Só comentar por
   semanas antes de qualquer DM. Nunca vender em comentário.
