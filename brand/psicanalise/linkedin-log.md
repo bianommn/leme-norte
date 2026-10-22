@@ -29,3 +29,31 @@ No seu trabalho, quanto de você chega junto com o crachá?
 
 #psicanálise #winnicott #saúdemental
 ```
+
+## Aprovado em 2026-10-22 - Tabela periódica da psicanálise
+
+- Tema: 25 conceitos de 7 autores, com exemplos do dia a dia
+- Formato: texto + imagem (brand/psicanalise/tabela-periodica.png)
+- Primeira linha: Psicanálise não é decorar autor.
+- Tamanho: 890 caracteres
+- Publicado em: {{data e hora}}
+- Resultado: {{preencher depois: impressões, reações, comentários}}
+
+```
+Psicanálise não é decorar autor.
+É reconhecer o conceito quando ele acontece na sua frente.
+
+Montei essa tabela com 25 conceitos de Freud, Lacan, Winnicott, Klein, Bion, Ferenczi e Anna Freud. Mas o mais interessante é que eles aparecem todo dia, fora do consultório:
+
+- Quem sorri na reunião e chega em casa vazio: Falso self (14).
+- O chefe que lembra seu pai, e você reage como reagia aos 12 anos: Transferência (17).
+- A irritação com o colega que, olhando bem, era sua: Identificação projetiva (13).
+- A música ou o ritual que acalma antes de dormir: Objeto transicional (09).
+- Alguém que escuta sem pressa de resolver: Holding (18).
+
+Os autores discordam em muita coisa. Mas uma ideia atravessa a tabela inteira: o que não é dito procura outro caminho pra aparecer.
+
+Qual desses 25 você já viu acontecer na sua vida antes de saber o nome?
+
+#psicanálise #saúdemental #autoconhecimento
+```
