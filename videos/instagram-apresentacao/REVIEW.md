@@ -29,3 +29,8 @@ Arquivo: `leme-norte-apresentacao.mp4` (1080×1920, 30 fps, 61 s, H.264, sem áu
 ## Mais fraco / com mais tempo
 - O mar (metade de baixo) fica vazio na maior parte do filme. Está sob a interface do Reels, mas um reflexo discreto do ponto dourado daria vida.
 - A rolagem das áreas (tecnologia → serviços) dá cerca de 0,7 s por palavra; dá para ler, mas é rápido.
+
+## Trilha (v4)
+- `assets/audio/trilha.m4a`: original do Suno (190 s). `assets/audio/trilha-video.m4a`: trecho de 127,7 s a 188,7 s, fade de entrada 0,8 s e de saída 2,2 s, normalizado.
+- O refrão final da música (172,4 s no original) cai em 44,7 s do vídeo, quando a aurora se abre; a respiração antes dele fica no fim da Experiência; o acorde final da música cai no encerramento.
+- Medido no MP4: -13,4 LUFS, pico -1,3 dBFS. Não ouvido por mim, só medido.
