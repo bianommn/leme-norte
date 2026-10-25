@@ -2,6 +2,10 @@
 
 Arquivo: `leme-norte-apresentacao.mp4` (1080×1920, 30 fps, 61 s, H.264, sem áudio).
 
+## Versão 3 (pedido do cliente)
+- O manifesto saiu e deu lugar a "O que fazemos" (25,6 a 35,6 s): "Tudo o que estava solto, em ordem." e os seis serviços do BPO (contas a pagar e a receber, conciliação bancária, fluxo de caixa, DRE gerencial, notas fiscais e boletos, documentos prontos para o contador), cada um com ícone de linha. Lista tirada do voice.md; retoma os relatórios soltos do gancho.
+- A ondulação de "tempestade" no horizonte saiu junto com o manifesto. Duração e amanhecer continuam iguais (61 s, aurora em 44,7 s).
+
 ## Versão 2 (pedido do cliente)
 - Ritmo mais lento: de 46 s para 61 s; cada frase segura mais tempo.
 - Fundos: "Horizonte noturno" (capa do Manual) no início e "Horizonte aurora" no amanhecer, recortados para 9:16 com o horizonte das fotos alinhado à linha do filme (y 1060) e o brilho do sol sob o ponto dourado.

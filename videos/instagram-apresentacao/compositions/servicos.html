@@ -1,0 +1,53 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; }
+    #servicos-block { gap: 22px; }
+    #servicos-list { display: flex; flex-direction: column; gap: 14px; margin-top: 18px; }
+    .servicos-item { display: flex; align-items: center; gap: 24px; height: 62px; opacity: 0; }
+    .servicos-ic { width: 46px; height: 46px; flex: none; }
+    .servicos-tx { font-family: "Poppins", Arial, sans-serif; font-weight: 300; font-size: 40px; color: #E4EEF4; }
+  </style>
+  <div id="root" data-composition-id="servicos" data-width="1080" data-height="1920">
+    <div class="ln-block" id="servicos-block" data-hold>
+      <div class="ln-label" id="servicos-label">O que fazemos</div>
+      <div class="ln-title" id="servicos-title"><span class="w">Tudo</span> <span class="w">o</span> <span class="w">que</span> <span class="w">estava</span> <span class="w">solto,</span> <span class="w ln-accent">em</span> <span class="w ln-accent">ordem.</span></div>
+      <div id="servicos-list">
+        <div class="servicos-item">
+          <svg class="servicos-ic" viewBox="0 0 24 24" fill="none" stroke="#C7D8E2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3 4 7l4 4" /><path d="M4 7h16" /><path d="m16 21 4-4-4-4" /><path d="M20 17H4" /></svg>
+          <span class="servicos-tx">Contas a pagar e a receber</span>
+        </div>
+        <div class="servicos-item">
+          <svg class="servicos-ic" viewBox="0 0 24 24" fill="none" stroke="#C7D8E2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 7 17l-5-5" /><path d="m22 10-7.5 7.5L13 16" /></svg>
+          <span class="servicos-tx">Conciliação bancária</span>
+        </div>
+        <div class="servicos-item">
+          <svg class="servicos-ic" viewBox="0 0 24 24" fill="none" stroke="#C7D8E2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17" /><polyline points="16 7 22 7 22 13" /></svg>
+          <span class="servicos-tx">Fluxo de caixa</span>
+        </div>
+        <div class="servicos-item">
+          <svg class="servicos-ic" viewBox="0 0 24 24" fill="none" stroke="#C7D8E2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18" /><path d="M18 17V9" /><path d="M13 17V5" /><path d="M8 17v-3" /></svg>
+          <span class="servicos-tx">DRE gerencial</span>
+        </div>
+        <div class="servicos-item">
+          <svg class="servicos-ic" viewBox="0 0 24 24" fill="none" stroke="#C7D8E2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z" /><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8" /><path d="M12 17.5v-11" /></svg>
+          <span class="servicos-tx">Notas fiscais e boletos</span>
+        </div>
+        <div class="servicos-item">
+          <svg class="servicos-ic" viewBox="0 0 24 24" fill="none" stroke="#C7D8E2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z" /><path d="m9 13 2 2 4-4" /></svg>
+          <span class="servicos-tx">Documentos prontos para o contador</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#servicos-label", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power2.out" }, 0.2);
+      tl.fromTo("#servicos-title .w", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.14, ease: "power4.out", stagger: 0.07 }, 0.35);
+      // The loose reports from the opening come back, one by one, in order.
+      tl.fromTo(".servicos-item", { opacity: 0, x: 40, filter: "blur(6px)" }, { opacity: 1, x: 0, filter: "blur(0px)", duration: 0.45, ease: "expo.out", stagger: 0.55 }, 1.5);
+      tl.fromTo("#servicos-block", { opacity: 1, filter: "blur(0px)" }, { opacity: 0, filter: "blur(8px)", duration: 0.22, ease: "power2.in" }, 9.7);
+      window.__timelines["servicos"] = tl;
+    })();
+  </script>
+</template>

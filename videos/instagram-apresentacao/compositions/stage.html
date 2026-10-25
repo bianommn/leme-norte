@@ -33,8 +33,7 @@
       // Everything on the horizon is a pure function of film time t.
       function draw(t) {
         const calm = 1 - smooth(5.6, 7.2, t);
-        const storm = t > 28.4 && t < 31.4 ? Math.sin(((t - 28.4) / 3.0) * Math.PI) : 0;
-        const amp = 24 * calm + 13 * storm;
+        const amp = 24 * calm;
         const phase = t * 2.0;
         let d = "";
         for (let x = 0; x <= 1080; x += 12) {
