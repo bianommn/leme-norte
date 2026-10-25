@@ -1,0 +1,37 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; }
+    #paraquem-window { height: 90px; overflow: hidden; }
+    #paraquem-reel { display: flex; flex-direction: column; }
+    #paraquem-reel span { display: block; height: 90px; line-height: 90px; font-style: italic; }
+  </style>
+  <div id="root" data-composition-id="paraquem" data-width="1080" data-height="1920">
+    <div class="ln-block" id="paraquem-block">
+      <div class="ln-label" id="paraquem-label">Para quem trabalhamos</div>
+      <div class="ln-title" id="paraquem-title"><span class="w">Empresas</span> <span class="w">que</span> <span class="w">crescem</span> <span class="w">no</span> <span class="w">digital,</span> <span class="w">de</span></div>
+      <div class="ln-title" id="paraquem-window" data-layout-allow-overflow>
+        <div id="paraquem-reel" class="ln-accent">
+          <span>tecnologia</span>
+          <span>consultoria</span>
+          <span>educação</span>
+          <span>serviços</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      tl.set("#paraquem-reel", { y: 0 }, 0);
+      tl.fromTo("#paraquem-label", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power2.out" }, 0.15);
+      tl.fromTo("#paraquem-title .w", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.14, ease: "power4.out", stagger: 0.07 }, 0.25);
+      tl.fromTo("#paraquem-window", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.18, ease: "power4.out" }, 0.85);
+      // Slot-machine roll: each segment holds long enough to read one word.
+      tl.fromTo("#paraquem-reel", { y: 0 }, { y: -90, duration: 0.16, ease: "power3.inOut" }, 1.75);
+      tl.fromTo("#paraquem-reel", { y: -90 }, { y: -180, duration: 0.16, ease: "power3.inOut" }, 2.6);
+      tl.fromTo("#paraquem-reel", { y: -180 }, { y: -270, duration: 0.16, ease: "power3.inOut" }, 3.45);
+      tl.fromTo("#paraquem-block", { opacity: 1, filter: "blur(0px)" }, { opacity: 0, filter: "blur(8px)", duration: 0.22, ease: "power2.in" }, 4.72);
+      window.__timelines["paraquem"] = tl;
+    })();
+  </script>
+</template>

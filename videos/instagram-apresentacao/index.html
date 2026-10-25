@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      @font-face { font-family: "Lora"; src: url("assets/fonts/lora-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-style: normal; }
+      @font-face { font-family: "Lora"; src: url("assets/fonts/lora-latin-400-italic.woff2") format("woff2"); font-weight: 400; font-style: italic; }
+      @font-face { font-family: "Poppins"; src: url("assets/fonts/poppins-latin-300-normal.woff2") format("woff2"); font-weight: 300; }
+      @font-face { font-family: "Poppins"; src: url("assets/fonts/poppins-latin-400-normal.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Poppins"; src: url("assets/fonts/poppins-latin-500-normal.woff2") format("woff2"); font-weight: 500; }
+      :root {
+        --color-night: #0E2433;
+        --color-deep: #0A2432;
+        --color-gold: #B8894A;
+        --color-dawn: #D9A25E;
+        --color-light: #E4EEF4;
+        --color-support: #A8BECB;
+        --color-ink-day: #0A2432;
+        --color-support-day: #4A5D6B;
+        --font-display: "Lora", Georgia, serif;
+        --font-body: "Poppins", Arial, sans-serif;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body {
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        background: var(--color-night);
+      }
+      #root { position: relative; width: 100%; height: 100%; }
+      /* Shared type system for every scene: text sits just above the horizon (y 975). */
+      .ln-block { position: absolute; left: 90px; width: 900px; bottom: 930px; display: flex; flex-direction: column; gap: 26px; }
+      .ln-label { font-family: "Poppins", Arial, sans-serif; font-weight: 400; font-size: 28px; letter-spacing: 0.24em; text-transform: uppercase; color: #A8BECB; }
+      .ln-title { font-family: "Lora", Georgia, serif; font-weight: 400; font-size: 76px; line-height: 1.18; color: #E4EEF4; }
+      .ln-body { font-family: "Poppins", Arial, sans-serif; font-weight: 300; font-size: 38px; line-height: 1.45; color: #A8BECB; }
+      .ln-title .w, .ln-body .w { display: inline-block; }
+      .ln-accent { color: #D9A25E; }
+      .ln-day .ln-label, .ln-day.ln-label { color: #4A5D6B; }
+      .ln-day .ln-title, .ln-day.ln-title { color: #0A2432; }
+      .ln-day .ln-accent { color: #B8894A; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="46" data-width="1080" data-height="1920">
+      <div id="stage" data-composition-id="stage" data-composition-src="compositions/stage.html" data-start="0" data-duration="46" data-track-index="0" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index:1"></div>
+      <div id="hook" data-composition-id="hook" data-composition-src="compositions/hook.html" data-start="0" data-duration="6" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index:2"></div>
+      <div id="direcao" data-composition-id="direcao" data-composition-src="compositions/direcao.html" data-start="4.8" data-duration="4.8" data-track-index="2" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index:3"></div>
+      <div id="quem" data-composition-id="quem" data-composition-src="compositions/quem.html" data-start="9.6" data-duration="5" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index:2"></div>
+      <div id="paraquem" data-composition-id="paraquem" data-composition-src="compositions/paraquem.html" data-start="14.6" data-duration="5" data-track-index="2" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index:3"></div>
+      <div id="manifesto" data-composition-id="manifesto" data-composition-src="compositions/manifesto.html" data-start="19.6" data-duration="7.8" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index:2"></div>
+      <div id="experiencia" data-composition-id="experiencia" data-composition-src="compositions/experiencia.html" data-start="27.4" data-duration="7.4" data-track-index="2" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index:3"></div>
+      <div id="agora" data-composition-id="agora" data-composition-src="compositions/agora.html" data-start="34.8" data-duration="4.4" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index:2"></div>
+      <div id="final" data-composition-id="final" data-composition-src="compositions/final.html" data-start="39.2" data-duration="6.8" data-track-index="2" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index:3"></div>
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

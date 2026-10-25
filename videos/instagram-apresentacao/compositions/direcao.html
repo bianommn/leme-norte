@@ -1,0 +1,24 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; }
+    #direcao-l1 .w, #direcao-l2 .w { opacity: 0; }
+  </style>
+  <div id="root" data-composition-id="direcao" data-width="1080" data-height="1920">
+    <div class="ln-block">
+      <div class="ln-title" id="direcao-l1"><span class="w">Empresários</span> <span class="w">não</span> <span class="w">precisam</span> <span class="w">de</span> <span class="w">mais</span> <span class="w">relatórios.</span></div>
+    </div>
+    <div class="ln-block">
+      <div class="ln-title" id="direcao-l2"><span class="w">Precisam</span> <span class="w">de</span> <span class="w ln-accent">direção.</span></div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#direcao-l1 .w", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.14, ease: "power4.out", stagger: 0.07 }, 0.25);
+      tl.fromTo("#direcao-l1 .w", { opacity: 1, filter: "blur(0px)" }, { opacity: 0, filter: "blur(8px)", duration: 0.18, ease: "power2.in", stagger: 0.03, immediateRender: false }, 2.85);
+      tl.fromTo("#direcao-l2 .w", { opacity: 0 }, { opacity: 1, duration: 0.2, ease: "power2.out", stagger: 0.1 }, 3.2);
+      tl.fromTo("#direcao-l2", { opacity: 1, filter: "blur(0px)" }, { opacity: 0, filter: "blur(8px)", duration: 0.2, ease: "power2.in" }, 4.5);
+      window.__timelines["direcao"] = tl;
+    })();
+  </script>
+</template>

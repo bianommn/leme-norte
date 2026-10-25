@@ -1,0 +1,54 @@
+<template>
+  <style>
+    @font-face { font-family: "Lora"; src: url("assets/fonts/lora-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-style: normal; }
+    @font-face { font-family: "Lora"; src: url("assets/fonts/lora-latin-400-italic.woff2") format("woff2"); font-weight: 400; font-style: italic; }
+    @font-face { font-family: "Poppins"; src: url("assets/fonts/poppins-latin-300-normal.woff2") format("woff2"); font-weight: 300; }
+    @font-face { font-family: "Poppins"; src: url("assets/fonts/poppins-latin-400-normal.woff2") format("woff2"); font-weight: 400; }
+    @font-face { font-family: "Poppins"; src: url("assets/fonts/poppins-latin-500-normal.woff2") format("woff2"); font-weight: 500; }
+    #root { position: absolute; inset: 0; }
+    .ln-block { position: absolute; left: 90px; width: 900px; bottom: 930px; display: flex; flex-direction: column; gap: 26px; }
+    .ln-label { font-family: "Poppins", Arial, sans-serif; font-weight: 400; font-size: 28px; letter-spacing: 0.24em; text-transform: uppercase; color: #A8BECB; }
+    .ln-title { font-family: "Lora", Georgia, serif; font-weight: 400; font-size: 76px; line-height: 1.18; color: #E4EEF4; }
+    .ln-title .w { display: inline-block; }
+    .hook-frag { position: absolute; border: 1.5px solid #2B4A5C; background: rgba(27, 54, 70, 0.55); border-radius: 2px; padding: 16px 22px; display: flex; flex-direction: column; gap: 4px; }
+    .hook-frag .k { font-family: "Poppins", Arial, sans-serif; font-weight: 400; font-size: 28px; letter-spacing: 0.12em; text-transform: uppercase; color: #A8BECB; }
+    .hook-frag .v { font-family: "Poppins", Arial, sans-serif; font-weight: 300; font-size: 46px; color: #E4EEF4; font-variant-numeric: tabular-nums; }
+    .hook-frag .f { font-family: "Poppins", Arial, sans-serif; font-weight: 300; font-size: 30px; color: #A8BECB; }
+  </style>
+  <div id="root" data-composition-id="hook" data-width="1080" data-height="1920">
+    <div id="hook-frags" data-layout-allow-overlap data-layout-allow-overflow>
+      <div class="hook-frag" id="hook-f1" style="left:90px;top:385px" data-h="120"><span class="k">DRE · set</span><span class="v">R$ 412 mil</span></div>
+      <div class="hook-frag" id="hook-f2" style="left:560px;top:335px" data-h="76"><span class="f">planilha_final_v3.xlsx</span></div>
+      <div class="hook-frag" id="hook-f3" style="left:640px;top:495px" data-h="120"><span class="k">Fluxo de caixa</span><span class="v">18,4%</span></div>
+      <div class="hook-frag" id="hook-f4" style="left:170px;top:605px" data-h="76"><span class="f">Extrato bancário</span></div>
+      <div class="hook-frag" id="hook-f5" style="left:700px;top:1155px" data-h="120"><span class="k">Contas a pagar</span><span class="v">21 dias</span></div>
+      <div class="hook-frag" id="hook-f6" style="left:110px;top:1225px" data-h="76"><span class="f">Notas fiscais</span></div>
+      <div class="hook-frag" id="hook-f7" style="left:420px;top:1335px" data-h="76"><span class="f">Conciliação</span></div>
+      <div class="hook-frag" id="hook-f8" style="left:560px;top:1485px" data-h="76"><span class="f">relatorio_mensal.pdf</span></div>
+    </div>
+    <div class="ln-block">
+      <div class="ln-label" id="hook-label">Antes</div>
+      <div class="ln-title" id="hook-quote"><span class="w">“Não</span> <span class="w">sei</span> <span class="w">exatamente</span> <span class="w">o</span> <span class="w">que</span> <span class="w">está</span> <span class="w">acontecendo.”</span></div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const HZ = 1060;
+      const tl = gsap.timeline({ paused: true });
+      const frags = Array.from(document.querySelectorAll(".hook-frag"));
+      // Deterministic drift per fragment (fixed table, no randomness).
+      const drift = [[18, -12, -4, 3], [-16, 10, 3, -2], [-20, 14, -2, 2], [14, -10, 2, -3], [-18, 12, 3, -2], [16, -14, -3, 2], [-12, 10, 2, -3], [14, -8, -2, 2]];
+      frags.forEach((el, i) => {
+        const [dx, dy, r0, r1] = drift[i];
+        tl.fromTo(el, { x: 0, y: 0, rotation: r0 }, { x: dx, y: dy, rotation: r0 + r1, duration: 4.2, ease: "sine.inOut" }, 0);
+        const top = parseFloat(el.style.top), h = parseFloat(el.dataset.h);
+        const toY = HZ - (top + h / 2);
+        tl.fromTo(el, { x: dx, y: dy, scale: 1, opacity: 1 }, { x: dx * 0.3, y: toY, scale: 0.12, opacity: 0, duration: 0.8, ease: "power3.in" }, 4.1 + i * 0.07);
+      });
+      // The doubt dissolves word by word as the reports fall into the horizon.
+      tl.fromTo("#hook-quote .w", { opacity: 1, filter: "blur(0px)" }, { opacity: 0, filter: "blur(8px)", duration: 0.22, ease: "power2.in", stagger: 0.04 }, 4.2);
+      tl.fromTo("#hook-label", { opacity: 1 }, { opacity: 0, duration: 0.2, ease: "power2.in" }, 4.2);
+      window.__timelines["hook"] = tl;
+    })();
+  </script>
+</template>

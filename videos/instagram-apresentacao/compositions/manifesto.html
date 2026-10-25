@@ -1,0 +1,29 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; }
+    #manifesto-label { position: absolute; left: 90px; top: 725px; opacity: 0; }
+  </style>
+  <div id="root" data-composition-id="manifesto" data-width="1080" data-height="1920">
+    <div class="ln-label" id="manifesto-label">Manifesto</div>
+    <div class="ln-block"><div class="ln-title" id="manifesto-l1"><span class="w">Há</span> <span class="w">dias</span> <span class="w">de</span> <span class="w">vento</span> <span class="w">favorável.</span></div></div>
+    <div class="ln-block"><div class="ln-title" id="manifesto-l2"><span class="w">Há</span> <span class="w">dias</span> <span class="w">de</span> <span class="w">tempestade.</span></div></div>
+    <div class="ln-block"><div class="ln-title" id="manifesto-l3"><span class="w">Números,</span> <span class="w">sozinhos,</span> <span class="w">não</span> <span class="w">mudam</span> <span class="w">empresas.</span></div></div>
+    <div class="ln-block"><div class="ln-title" id="manifesto-l4"><span class="w ln-accent">Decisões</span> <span class="w">mudam.</span></div></div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      const IN = { opacity: 1, filter: "blur(0px)", duration: 0.14, ease: "power4.out", stagger: 0.07 };
+      const OUT = { opacity: 0, filter: "blur(8px)", duration: 0.18, ease: "power2.in" };
+      tl.fromTo("#manifesto-label", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power2.out" }, 0.1);
+      // One stage, four lines: blur swaps, the ground never cuts.
+      const lines = [["#manifesto-l1", 0.3, 2.1], ["#manifesto-l2", 2.25, 4.0], ["#manifesto-l3", 4.15, 6.05], ["#manifesto-l4", 6.2, 7.55]];
+      lines.forEach(([sel, tin, tout]) => {
+        tl.fromTo(sel + " .w", { opacity: 0, filter: "blur(6px)" }, IN, tin);
+        tl.fromTo(sel, { opacity: 1, filter: "blur(0px)" }, OUT, tout);
+      });
+      tl.fromTo("#manifesto-label", { opacity: 1 }, { opacity: 0, duration: 0.18, ease: "power2.in", immediateRender: false }, 7.55);
+      window.__timelines["manifesto"] = tl;
+    })();
+  </script>
+</template>

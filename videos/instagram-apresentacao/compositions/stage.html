@@ -1,0 +1,80 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; }
+    #stage-sky { position: absolute; left: 0; top: 0; width: 1080px; height: 1060px; background: #0E2433; }
+    #stage-sky-day { position: absolute; left: 0; top: 0; width: 1080px; height: 1060px; background: #F7FAFC; clip-path: inset(100% 0% 0% 0%); }
+    #stage-sea-day { position: absolute; left: 0; top: 1060px; width: 1080px; height: 860px; background: #E7EFF4; clip-path: inset(0% 0% 100% 0%); }
+    #stage-sea { position: absolute; left: 0; top: 1060px; width: 1080px; height: 860px; background: #0A2432; }
+    #stage-svg { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+  </style>
+  <div id="root" data-composition-id="stage" data-width="1080" data-height="1920" data-layout-ignore>
+    <div id="stage-sky"></div>
+    <div id="stage-sea"></div>
+    <div id="stage-sky-day"></div>
+    <div id="stage-sea-day"></div>
+    <svg id="stage-svg" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg">
+      <path id="stage-line" d="M0 1060 L1080 1060" fill="none" stroke="#C7D8E2" stroke-width="2" />
+      <g id="stage-ticks">
+        <circle r="3.5" cx="0" cy="1060" /><circle r="3.5" cx="0" cy="1060" /><circle r="3.5" cx="0" cy="1060" />
+        <circle r="3.5" cx="0" cy="1060" /><circle r="3.5" cx="0" cy="1060" /><circle r="3.5" cx="0" cy="1060" />
+        <circle r="3.5" cx="0" cy="1060" /><circle r="3.5" cx="0" cy="1060" /><circle r="3.5" cx="0" cy="1060" />
+      </g>
+      <circle id="stage-dot" cx="907" cy="1060" r="10" fill="#D9A25E" />
+    </svg>
+  </div>
+  <script>
+    (function () {
+      const HZ = 1060, DOT_X = 907, SPACING = 135;
+      const line = document.querySelector("#stage-line");
+      const ticks = Array.from(document.querySelectorAll("#stage-ticks circle"));
+      const smooth = (a, b, x) => { const t = Math.min(1, Math.max(0, (x - a) / (b - a))); return t * t * (3 - 2 * t); };
+
+      // Everything on the horizon is a pure function of film time t.
+      function draw(t) {
+        const calm = 1 - smooth(4.4, 5.8, t);
+        const storm = t > 21.4 && t < 23.8 ? Math.sin(((t - 21.4) / 2.4) * Math.PI) : 0;
+        const amp = 24 * calm + 13 * storm;
+        const phase = t * 2.4;
+        let d = "";
+        for (let x = 0; x <= 1080; x += 12) {
+          const y = HZ + amp * Math.sin((x / 1080) * Math.PI * 5 + phase) * (0.6 + 0.4 * Math.sin(x / 170 + t));
+          d += (x === 0 ? "M" : " L") + x + " " + y.toFixed(2);
+        }
+        line.setAttribute("d", d);
+
+        // The journey: route points travel past the current position (gold dot).
+        const vis = smooth(5.8, 6.6, t) * (1 - smooth(26.8, 27.6, t));
+        const offset = (t * 46) % SPACING;
+        ticks.forEach((c, i) => {
+          const x = i * SPACING - offset + 60;
+          const nearDot = Math.abs(x - DOT_X) < 20 ? 0 : 1;
+          c.setAttribute("cx", x.toFixed(2));
+          c.setAttribute("fill", x < DOT_X ? "#5F7482" : "#C7D8E2");
+          c.setAttribute("opacity", (vis * nearDot).toFixed(3));
+        });
+      }
+
+      const tl = gsap.timeline({ paused: true });
+      const clock = { t: 0 };
+      tl.to(clock, { t: 46, duration: 46, ease: "none", onUpdate: () => draw(clock.t) }, 0);
+
+      // The gold dot is born when "direção" lands.
+      tl.fromTo("#stage-dot", { scale: 0, transformOrigin: "50% 50%" }, { scale: 1, duration: 0.6, ease: "expo.out" }, 8.1);
+
+      // Pre-dawn, then dawn.
+      tl.fromTo("#stage-sky", { backgroundColor: "#0E2433" }, { backgroundColor: "#16323F", duration: 6.8, ease: "power1.inOut" }, 27.6);
+      // Dawn spreads from the horizon line, the only light source of the night.
+      tl.fromTo("#stage-sky-day", { clipPath: "inset(100% 0% 0% 0%)" }, { clipPath: "inset(0% 0% 0% 0%)", duration: 0.9, ease: "power2.inOut" }, 34.5);
+      tl.fromTo("#stage-sea-day", { clipPath: "inset(0% 0% 100% 0%)" }, { clipPath: "inset(0% 0% 0% 0%)", duration: 0.9, ease: "power2.inOut" }, 34.5);
+      tl.fromTo("#stage-line", { attr: { stroke: "#C7D8E2" } }, { attr: { stroke: "#123C55" }, duration: 1.0, ease: "power2.inOut" }, 34.5);
+      tl.fromTo("#stage-dot", { attr: { fill: "#D9A25E" } }, { attr: { fill: "#B8894A" }, duration: 1.0, ease: "power2.inOut" }, 34.5);
+
+      // Hand-off to the end card: its own dot takes over, its logo's horizon replaces this line.
+      tl.set("#stage-dot", { opacity: 0 }, 39.2);
+      tl.fromTo("#stage-line", { opacity: 1 }, { opacity: 0, duration: 0.7, ease: "power2.inOut" }, 41.1);
+
+      draw(0);
+      window.__timelines["stage"] = tl;
+    })();
+  </script>
+</template>

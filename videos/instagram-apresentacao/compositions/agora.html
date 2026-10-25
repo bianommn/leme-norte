@@ -1,0 +1,21 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; }
+    #agora-quote { font-style: italic; }
+  </style>
+  <div id="root" data-composition-id="agora" data-width="1080" data-height="1920">
+    <div class="ln-block ln-day" id="agora-block">
+      <div class="ln-label" id="agora-label">Depois</div>
+      <div class="ln-title" id="agora-quote" data-hold>“Agora eu sei qual é o <span class="ln-accent">próximo passo.</span>”</div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#agora-label", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power2.out" }, 0.25);
+      tl.fromTo("#agora-quote", { opacity: 0, filter: "blur(10px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.35, ease: "power4.out" }, 0.4);
+      tl.fromTo("#agora-block", { opacity: 1, filter: "blur(0px)" }, { opacity: 0, filter: "blur(8px)", duration: 0.2, ease: "power2.in" }, 4.1);
+      window.__timelines["agora"] = tl;
+    })();
+  </script>
+</template>

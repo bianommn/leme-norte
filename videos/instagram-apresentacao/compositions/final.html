@@ -1,0 +1,50 @@
+<template>
+  <style>
+    @font-face { font-family: "Lora"; src: url("assets/fonts/lora-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-style: normal; }
+    @font-face { font-family: "Lora"; src: url("assets/fonts/lora-latin-400-italic.woff2") format("woff2"); font-weight: 400; font-style: italic; }
+    @font-face { font-family: "Poppins"; src: url("assets/fonts/poppins-latin-300-normal.woff2") format("woff2"); font-weight: 300; }
+    @font-face { font-family: "Poppins"; src: url("assets/fonts/poppins-latin-400-normal.woff2") format("woff2"); font-weight: 400; }
+    @font-face { font-family: "Poppins"; src: url("assets/fonts/poppins-latin-500-normal.woff2") format("woff2"); font-weight: 500; }
+    #root { position: absolute; inset: 0; }
+    #final-logo { position: absolute; left: 90px; top: 787px; width: 900px; height: 284px; }
+    #final-svg { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+    #final-lema { position: absolute; left: 90px; width: 900px; top: 605px; text-align: center; font-family: "Lora", Georgia, serif; font-size: 64px; line-height: 1.2; color: #0A2432; }
+    #final-lema .w { display: inline-block; }
+    #final-tagline { position: absolute; left: 90px; width: 900px; top: 1135px; text-align: center; font-family: "Poppins", Arial, sans-serif; font-weight: 500; font-size: 28px; letter-spacing: 0.2em; text-transform: uppercase; color: #B8894A; }
+    #final-cta { position: absolute; left: 90px; width: 900px; top: 1205px; text-align: center; font-family: "Lora", Georgia, serif; font-style: italic; font-size: 54px; color: #0A2432; opacity: 0; }
+    #final-cta .w { display: inline-block; }
+    #final-url { position: absolute; left: 90px; width: 900px; top: 1282px; text-align: center; font-family: "Poppins", Arial, sans-serif; font-weight: 300; font-size: 34px; color: #4A5D6B; }
+  </style>
+  <div id="root" data-composition-id="final" data-width="1080" data-height="1920">
+    <img id="final-logo" src="assets/logos/ln-principal.png" alt="Leme Norte" />
+    <svg id="final-svg" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg" data-layout-ignore>
+      <polygon id="final-needle" points="540,886 544,1053 540,1071 536,1053" fill="#B8894A" />
+      <polygon id="final-star" points="540,788 546,811 569.5,817 546,823 540,846 534,823 510.5,817 534,811" fill="#B8894A" />
+      <circle id="final-dot" cx="907" cy="1060" r="10" fill="#B8894A" />
+    </svg>
+    <div id="final-lema"><span class="w">Toda</span> <span class="w">decisão</span> <span class="w">muda</span> <span class="w">uma</span> <span class="w">rota.</span></div>
+    <div id="final-tagline">Transformando dados em direção</div>
+    <div id="final-cta"><span class="w">Siga</span> <span class="w">a</span> <span class="w">Leme</span> <span class="w">Norte</span></div>
+    <div id="final-url">lemenorte.com.br</div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      tl.set("#final-dot", { attr: { cx: 907, r: 10 } }, 0);
+      // The current position travels to the centre and becomes the needle, then the star.
+      tl.fromTo("#final-dot", { attr: { cx: 907 } }, { attr: { cx: 540 }, duration: 0.7, ease: "power2.inOut" }, 0);
+      tl.fromTo("#final-needle", { scaleY: 0, svgOrigin: "540 1071" }, { scaleY: 1, svgOrigin: "540 1071", duration: 0.6, ease: "expo.out" }, 0.7);
+      tl.fromTo("#final-dot", { attr: { r: 10 } }, { attr: { r: 0 }, duration: 0.25, ease: "power2.in" }, 0.75);
+      tl.fromTo("#final-star", { scale: 0, rotation: -90, svgOrigin: "540 817" }, { scale: 1, rotation: 0, svgOrigin: "540 817", duration: 0.7, ease: "back.out(1.3)" }, 1.2);
+      // The official signature opens from the centre; its horizon replaces the film's horizon.
+      tl.fromTo("#final-logo", { clipPath: "inset(0% 50% 0% 50%)" }, { clipPath: "inset(0% 0% 0% 0%)", duration: 0.9, ease: "power3.inOut" }, 1.9);
+      tl.set("#final-needle, #final-star", { opacity: 0 }, 2.9);
+      tl.fromTo("#final-lema .w", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.14, ease: "power4.out", stagger: 0.07 }, 2.8);
+      tl.fromTo("#final-tagline", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.3, ease: "power4.out" }, 3.4);
+      tl.fromTo("#final-cta", { opacity: 0 }, { opacity: 1, duration: 0.01 }, 4.0);
+      tl.fromTo("#final-cta .w", { opacity: 0.12 }, { opacity: 1, duration: 0.18, ease: "power2.out", stagger: 0.09 }, 4.0);
+      tl.fromTo("#final-url", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power2.out" }, 4.35);
+      window.__timelines["final"] = tl;
+    })();
+  </script>
+</template>
