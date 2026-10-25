@@ -2,7 +2,7 @@
 
 GOAL:    quem vê o primeiro post entende quem é a Leme Norte, para quem trabalha e no que acredita, sente "agora eu sei qual é o próximo passo" e segue a página.
 OUTPUT:  HyperFrames, 1080 x 1920 (Reels 9:16), 30 fps. Texto entre y 300 e y 1300 (faixa segura do Reels e recorte 3:4 do grid).
-TIME:    45 s x 30 = 1350 quadros. Sem música (sem fonte disponível no ambiente): entregar mudo, música adicionada no app do Instagram.
+TIME:    61 s x 30 = 1830 quadros (v2; tempos dos planos abaixo são da v1, ver index.html e REVIEW.md). Sem música (sem fonte disponível no ambiente): entregar mudo, música adicionada no app do Instagram.
 LOOK:    mundo único: céu + mar separados pela linha do horizonte em y 975.
          Noite (0 a 33,8 s): céu #0E2433, mar #0A2432, linha #C7D8E2 2 px, texto #E4EEF4, apoio #A8BECB, acento Luz da Alvorada #D9A25E.
          Amanhecer (33,8 s em diante): céu #F7FAFC, mar #E7EFF4, linha #123C55, texto #0A2432, apoio #4A5D6B, acento Ouro Norte #B8894A.

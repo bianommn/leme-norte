@@ -4,7 +4,7 @@
     #quem-body { opacity: 0; }
   </style>
   <div id="root" data-composition-id="quem" data-width="1080" data-height="1920">
-    <div class="ln-block" id="quem-block">
+    <div class="ln-block" id="quem-block" data-hold>
       <div class="ln-label" id="quem-label">Quem somos</div>
       <div class="ln-title" id="quem-title">BPO Financeiro para negócios digitais</div>
       <div class="ln-body" id="quem-body"><span class="w">Cuidamos</span> <span class="w">da</span> <span class="w">rotina</span> <span class="w">financeira,</span> <span class="w">junto</span> <span class="w">com</span> <span class="w">o</span> <span class="w">seu</span> <span class="w">contador.</span></div>
@@ -13,11 +13,11 @@
   <script>
     (function () {
       const tl = gsap.timeline({ paused: true });
-      tl.fromTo("#quem-label", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.3, ease: "power4.out" }, 0.15);
-      tl.fromTo("#quem-title", { opacity: 0, filter: "blur(10px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power4.out" }, 0.3);
-      tl.fromTo("#quem-body", { opacity: 0 }, { opacity: 1, duration: 0.01 }, 1.1);
-      tl.fromTo("#quem-body .w", { opacity: 0.15 }, { opacity: 1, duration: 0.16, ease: "power2.out", stagger: 0.08 }, 1.1);
-      tl.fromTo("#quem-block", { opacity: 1, filter: "blur(0px)" }, { opacity: 0, filter: "blur(8px)", duration: 0.22, ease: "power2.in" }, 4.72);
+      tl.fromTo("#quem-label", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.3, ease: "power4.out" }, 0.2);
+      tl.fromTo("#quem-title", { opacity: 0, filter: "blur(10px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power4.out" }, 0.4);
+      tl.fromTo("#quem-body", { opacity: 0 }, { opacity: 1, duration: 0.01 }, 1.4);
+      tl.fromTo("#quem-body .w", { opacity: 0.15 }, { opacity: 1, duration: 0.16, ease: "power2.out", stagger: 0.1 }, 1.4);
+      tl.fromTo("#quem-block", { opacity: 1, filter: "blur(0px)" }, { opacity: 0, filter: "blur(8px)", duration: 0.22, ease: "power2.in" }, 6.3);
       window.__timelines["quem"] = tl;
     })();
   </script>

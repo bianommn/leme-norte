@@ -40,14 +40,14 @@
       const drift = [[18, -12, -4, 3], [-16, 10, 3, -2], [-20, 14, -2, 2], [14, -10, 2, -3], [-18, 12, 3, -2], [16, -14, -3, 2], [-12, 10, 2, -3], [14, -8, -2, 2]];
       frags.forEach((el, i) => {
         const [dx, dy, r0, r1] = drift[i];
-        tl.fromTo(el, { x: 0, y: 0, rotation: r0 }, { x: dx, y: dy, rotation: r0 + r1, duration: 4.2, ease: "sine.inOut" }, 0);
+        tl.fromTo(el, { x: 0, y: 0, rotation: r0 }, { x: dx, y: dy, rotation: r0 + r1, duration: 5.6, ease: "sine.inOut" }, 0);
         const top = parseFloat(el.style.top), h = parseFloat(el.dataset.h);
         const toY = HZ - (top + h / 2);
-        tl.fromTo(el, { x: dx, y: dy, scale: 1, opacity: 1 }, { x: dx * 0.3, y: toY, scale: 0.12, opacity: 0, duration: 0.8, ease: "power3.in" }, 4.1 + i * 0.07);
+        tl.fromTo(el, { x: dx, y: dy, scale: 1, opacity: 1 }, { x: dx * 0.3, y: toY, scale: 0.12, opacity: 0, duration: 0.9, ease: "power3.in" }, 5.4 + i * 0.07);
       });
       // The doubt dissolves word by word as the reports fall into the horizon.
-      tl.fromTo("#hook-quote .w", { opacity: 1, filter: "blur(0px)" }, { opacity: 0, filter: "blur(8px)", duration: 0.22, ease: "power2.in", stagger: 0.04 }, 4.2);
-      tl.fromTo("#hook-label", { opacity: 1 }, { opacity: 0, duration: 0.2, ease: "power2.in" }, 4.2);
+      tl.fromTo("#hook-quote .w", { opacity: 1, filter: "blur(0px)" }, { opacity: 0, filter: "blur(8px)", duration: 0.22, ease: "power2.in", stagger: 0.04 }, 5.5);
+      tl.fromTo("#hook-label", { opacity: 1 }, { opacity: 0, duration: 0.2, ease: "power2.in" }, 5.5);
       window.__timelines["hook"] = tl;
     })();
   </script>

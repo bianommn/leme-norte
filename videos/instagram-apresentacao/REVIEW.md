@@ -1,6 +1,13 @@
 # REVIEW — Leme Norte, apresentação Instagram
 
-Arquivo: `leme-norte-apresentacao.mp4` (1080×1920, 30 fps, 46 s, H.264, sem áudio).
+Arquivo: `leme-norte-apresentacao.mp4` (1080×1920, 30 fps, 61 s, H.264, sem áudio).
+
+## Versão 2 (pedido do cliente)
+- Ritmo mais lento: de 46 s para 61 s; cada frase segura mais tempo.
+- Fundos: "Horizonte noturno" (capa do Manual) no início e "Horizonte aurora" no amanhecer, recortados para 9:16 com o horizonte das fotos alinhado à linha do filme (y 1060) e o brilho do sol sob o ponto dourado.
+- Amanhecer aos poucos: de 28 s a 44,6 s a luz do sol cresce no horizonte; de 44,7 s a 49 s a aurora se abre em faixa ao longo do horizonte e sobe até tomar o céu, sem texto na tela.
+- Final: "Siga" + símbolo do Instagram (desenhado em traço, estilo dos ícones da marca) + @lemenortebr, e lemenorte.com.br abaixo.
+- Tentativas descartadas: dissolver uma foto na outra (o céu ficava cinza e baixava o contraste do texto) e revelar a aurora em círculo (lia como um holofote).
 
 ## Escolhas
 - Roteiro A, "Rumo ao horizonte", escolhido pelo cliente. Os roteiros B (manifesto) e C (do número à decisão) estão em `STORYLINES.md`.

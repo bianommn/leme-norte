@@ -17,12 +17,12 @@
       const OUT = { opacity: 0, filter: "blur(8px)", duration: 0.18, ease: "power2.in" };
       tl.fromTo("#manifesto-label", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power2.out" }, 0.1);
       // One stage, four lines: blur swaps, the ground never cuts.
-      const lines = [["#manifesto-l1", 0.3, 2.1], ["#manifesto-l2", 2.25, 4.0], ["#manifesto-l3", 4.15, 6.05], ["#manifesto-l4", 6.2, 7.55]];
+      const lines = [["#manifesto-l1", 0.4, 2.8], ["#manifesto-l2", 3.0, 5.4], ["#manifesto-l3", 5.6, 8.0], ["#manifesto-l4", 8.2, 9.7]];
       lines.forEach(([sel, tin, tout]) => {
         tl.fromTo(sel + " .w", { opacity: 0, filter: "blur(6px)" }, IN, tin);
         tl.fromTo(sel, { opacity: 1, filter: "blur(0px)" }, OUT, tout);
       });
-      tl.fromTo("#manifesto-label", { opacity: 1 }, { opacity: 0, duration: 0.18, ease: "power2.in", immediateRender: false }, 7.55);
+      tl.fromTo("#manifesto-label", { opacity: 1 }, { opacity: 0, duration: 0.18, ease: "power2.in", immediateRender: false }, 9.7);
       window.__timelines["manifesto"] = tl;
     })();
   </script>

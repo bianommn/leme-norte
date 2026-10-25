@@ -1,17 +1,18 @@
 <template>
   <style>
-    #root { position: absolute; inset: 0; overflow: hidden; }
-    #stage-sky { position: absolute; left: 0; top: 0; width: 1080px; height: 1060px; background: #0E2433; }
-    #stage-sky-day { position: absolute; left: 0; top: 0; width: 1080px; height: 1060px; background: #F7FAFC; clip-path: inset(100% 0% 0% 0%); }
-    #stage-sea-day { position: absolute; left: 0; top: 1060px; width: 1080px; height: 860px; background: #E7EFF4; clip-path: inset(0% 0% 100% 0%); }
-    #stage-sea { position: absolute; left: 0; top: 1060px; width: 1080px; height: 860px; background: #0A2432; }
+    #root { position: absolute; inset: 0; overflow: hidden; background: #0A2432; }
+    /* Both photographs are scaled so their horizon sits on the film's horizon (y 1060). */
+    #stage-night { position: absolute; left: -1890px; top: -345px; width: 3969px; height: 2268px; }
+    /* The aurora opens as a wide band along the horizon, from the sun, then rises to fill the sky. */
+    #stage-aurora-wrap { position: absolute; inset: 0; --rx: 1px; --ry: 1px; -webkit-mask-image: radial-gradient(var(--rx) var(--ry) at 907px 1060px, #000 45%, transparent 100%); mask-image: radial-gradient(var(--rx) var(--ry) at 907px 1060px, #000 45%, transparent 100%); }
+    #stage-aurora { position: absolute; left: -1201px; top: -36px; width: 3482px; height: 1958px; }
+    #stage-sun { position: absolute; left: 307px; top: 760px; width: 1200px; height: 600px; border-radius: 50%; background: radial-gradient(closest-side, rgba(217, 162, 94, 0.55), rgba(217, 162, 94, 0.18) 55%, rgba(217, 162, 94, 0) 100%); opacity: 0; }
     #stage-svg { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
   </style>
   <div id="root" data-composition-id="stage" data-width="1080" data-height="1920" data-layout-ignore>
-    <div id="stage-sky"></div>
-    <div id="stage-sea"></div>
-    <div id="stage-sky-day"></div>
-    <div id="stage-sea-day"></div>
+    <img id="stage-night" src="assets/bg/horizonte-noturno.jpg" alt="" />
+    <div id="stage-sun"></div>
+    <div id="stage-aurora-wrap"><img id="stage-aurora" src="assets/bg/horizonte-aurora.png" alt="" /></div>
     <svg id="stage-svg" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg">
       <path id="stage-line" d="M0 1060 L1080 1060" fill="none" stroke="#C7D8E2" stroke-width="2" />
       <g id="stage-ticks">
@@ -31,10 +32,10 @@
 
       // Everything on the horizon is a pure function of film time t.
       function draw(t) {
-        const calm = 1 - smooth(4.4, 5.8, t);
-        const storm = t > 21.4 && t < 23.8 ? Math.sin(((t - 21.4) / 2.4) * Math.PI) : 0;
+        const calm = 1 - smooth(5.6, 7.2, t);
+        const storm = t > 28.4 && t < 31.4 ? Math.sin(((t - 28.4) / 3.0) * Math.PI) : 0;
         const amp = 24 * calm + 13 * storm;
-        const phase = t * 2.4;
+        const phase = t * 2.0;
         let d = "";
         for (let x = 0; x <= 1080; x += 12) {
           const y = HZ + amp * Math.sin((x / 1080) * Math.PI * 5 + phase) * (0.6 + 0.4 * Math.sin(x / 170 + t));
@@ -43,8 +44,8 @@
         line.setAttribute("d", d);
 
         // The journey: route points travel past the current position (gold dot).
-        const vis = smooth(5.8, 6.6, t) * (1 - smooth(26.8, 27.6, t));
-        const offset = (t * 46) % SPACING;
+        const vis = smooth(7.2, 8.2, t) * (1 - smooth(34.8, 35.6, t));
+        const offset = (t * 40) % SPACING;
         ticks.forEach((c, i) => {
           const x = i * SPACING - offset + 60;
           const nearDot = Math.abs(x - DOT_X) < 20 ? 0 : 1;
@@ -56,22 +57,23 @@
 
       const tl = gsap.timeline({ paused: true });
       const clock = { t: 0 };
-      tl.to(clock, { t: 46, duration: 46, ease: "none", onUpdate: () => draw(clock.t) }, 0);
+      tl.to(clock, { t: 61, duration: 61, ease: "none", onUpdate: () => draw(clock.t) }, 0);
 
       // The gold dot is born when "direção" lands.
-      tl.fromTo("#stage-dot", { scale: 0, transformOrigin: "50% 50%" }, { scale: 1, duration: 0.6, ease: "expo.out" }, 8.1);
+      tl.fromTo("#stage-dot", { scale: 0, transformOrigin: "50% 50%" }, { scale: 1, duration: 0.6, ease: "expo.out" }, 10.3);
 
-      // Pre-dawn, then dawn.
-      tl.fromTo("#stage-sky", { backgroundColor: "#0E2433" }, { backgroundColor: "#16323F", duration: 6.8, ease: "power1.inOut" }, 27.6);
-      // Dawn spreads from the horizon line, the only light source of the night.
-      tl.fromTo("#stage-sky-day", { clipPath: "inset(100% 0% 0% 0%)" }, { clipPath: "inset(0% 0% 0% 0%)", duration: 0.9, ease: "power2.inOut" }, 34.5);
-      tl.fromTo("#stage-sea-day", { clipPath: "inset(0% 0% 100% 0%)" }, { clipPath: "inset(0% 0% 0% 0%)", duration: 0.9, ease: "power2.inOut" }, 34.5);
-      tl.fromTo("#stage-line", { attr: { stroke: "#C7D8E2" } }, { attr: { stroke: "#123C55" }, duration: 1.0, ease: "power2.inOut" }, 34.5);
-      tl.fromTo("#stage-dot", { attr: { fill: "#D9A25E" } }, { attr: { fill: "#B8894A" }, duration: 1.0, ease: "power2.inOut" }, 34.5);
+      // Dawn, little by little: the night thins and the sun warms the horizon while the story runs...
+      tl.fromTo("#stage-sun", { opacity: 0, scale: 0.7 }, { opacity: 0.7, scale: 1.15, duration: 16.6, ease: "power1.inOut" }, 28);
+      // ...then, in a moment with no text, the aurora spreads from the sun across the whole sky.
+      tl.fromTo("#stage-aurora-wrap", { "--rx": "1px" }, { "--rx": "4200px", duration: 3.2, ease: "power2.out" }, 44.7);
+      tl.fromTo("#stage-aurora-wrap", { "--ry": "1px" }, { "--ry": "2600px", duration: 4.4, ease: "power1.inOut" }, 44.7);
+      tl.fromTo("#stage-sun", { opacity: 0.7 }, { opacity: 0, duration: 2.0, ease: "power2.inOut", immediateRender: false }, 46.4);
+      tl.fromTo("#stage-line", { attr: { stroke: "#C7D8E2" } }, { attr: { stroke: "#123C55" }, duration: 2.6, ease: "power2.inOut" }, 44.9);
+      tl.fromTo("#stage-dot", { attr: { fill: "#D9A25E" } }, { attr: { fill: "#B8894A" }, duration: 2.6, ease: "power2.inOut" }, 44.9);
 
       // Hand-off to the end card: its own dot takes over, its logo's horizon replaces this line.
-      tl.set("#stage-dot", { opacity: 0 }, 39.2);
-      tl.fromTo("#stage-line", { opacity: 1 }, { opacity: 0, duration: 0.7, ease: "power2.inOut" }, 41.1);
+      tl.set("#stage-dot", { opacity: 0 }, 52);
+      tl.fromTo("#stage-line", { opacity: 1 }, { opacity: 0, duration: 0.8, ease: "power2.inOut" }, 54.5);
 
       draw(0);
       window.__timelines["stage"] = tl;
