@@ -4,18 +4,34 @@ Base: auditoria de 23/out/2026 (749 seguidores, 4 meses sem postar, base
 herdada do eneagrama, 59% de pulo nos 3 primeiros segundos, zero salvamentos
 em carrossel, nenhum caminho até a sessão).
 
-**A ideia:** não romper com quem veio pelo eneagrama, levar essas pessoas junto.
-O eneagrama descreve o padrão, a psicanálise pergunta de onde ele veio. Essa
-ponte é o fio das primeiras semanas. O convite para sessão só aparece depois
-que a audiência voltou a interagir e já sabe quem é o Fabiano.
+**A ideia:** levar junto quem veio pelo eneagrama. O eneagrama descreve o
+padrão, a psicanálise pergunta de onde ele veio. Essa ponte é o fio das
+primeiras semanas. O convite para sessão só aparece depois que a audiência
+voltou a interagir e já sabe quem é o Fabiano.
 
 O caminho passivo fica ligado desde o primeiro dia (bio nova, link com
 WhatsApp, destaques "Comece aqui" e "Como funciona"). Quem já estiver pronto
 encontra o caminho sozinho. O que muda por fase é o que os posts pedem.
 
-Ritmo: 3 Reels + 2 carrosséis por semana, stories todos os dias (3 a 7 telas).
-Os ganchos seguem o `voice.md`: nada de "você está...", sem termos técnicos.
-Números entre parênteses remetem ao `ideias.md`.
+Os ganchos seguem o `voice.md`: nada de "você está...", sem termos técnicos,
+sem construção por contraste, cena antes de conclusão. Números entre
+parênteses remetem ao `ideias.md`.
+
+---
+
+## Ritmo
+
+O perfil ficou 4 meses parado, e o Fabiano divide a semana com a clínica e
+outra empresa. Constância vale mais que volume: um aquecimento que quebra na
+semana 3 faz mais estrago que um mais lento.
+
+- **Ritmo base (o compromisso):** os 3 posts de cada semana das tabelas
+  abaixo, mais stories em 4 dias da semana (3 a 5 telas).
+- **Ritmo cheio (quando houver fôlego):** até 2 posts extras por semana,
+  tirados do `ideias.md` dentro dos pilares, e stories todos os dias.
+
+Decidir no domingo qual ritmo a semana vai ter. Nunca abrir mão do ritmo base
+para tentar o cheio.
 
 ---
 
@@ -29,14 +45,19 @@ responder).
 
 | Dia | Formato | Post | Gancho | CTA |
 | --- | --- | --- | --- | --- |
-| Seg | Reel (telas) | O forte da família (12) | "Desde os 12 anos, eu resolvo tudo." | Manda pra quem é o forte da sua família. |
-| Qua | Carrossel ponte | O que o teste não conta | Capa: "O teste diz o seu tipo. Não diz de onde ele veio." | Salva e comenta o seu tipo. |
-| Sex | Reel ponte | Tipo 2 | "Tem gente que só se sente amada quando está ajudando." | Comenta 2 se você é do tipo 2 ou convive com um. |
+| Seg | Reel ponte | Tipo 2 | "Tem gente que só se sente amada quando está ajudando." | Comenta 2 se você é do tipo 2 ou convive com um. |
+| Qua | Carrossel ponte | O que o teste conta, e o que fica por contar | Capa: "O teste mostra o seu tipo. A pergunta que fica é de onde ele veio." | Salva e comenta o seu tipo. |
+| Sex | Reel (telas) | O forte da família (12) | "Com 12 anos, eu já escondia o boletim pra não dar trabalho." | Manda pra quem é o forte da sua família. |
+
+A semana abre pelo eneagrama, que é o que a base herdada reconhece, e
+termina no Reel mais psicanalítico, depois que o carrossel de quarta já
+explicou a mudança. O roteiro do "forte da família" está pronto no
+`voice.md` (exemplo de calibragem da Regra 3).
 
 O carrossel de quarta é o post de transição. Ele explica, sem jargão, por que
 o perfil mudou: o eneagrama mostra o jeito que a pessoa aprendeu a funcionar;
 a análise olha para a história que tornou esse jeito necessário. Último slide:
-"O eneagrama continua aqui. Agora ele é o começo da conversa, não o fim."
+"O eneagrama continua aqui. Agora ele abre a conversa."
 
 ### Semana 2
 
@@ -77,8 +98,10 @@ revisar os ganchos antes de seguir).
 
 O carrossel de quarta é a apresentação: online desde 2020, por que a escuta
 era tão necessária naquela época, especializações em saúde mental no trabalho
-e terapia de casal, formação winnicottiana, e por que o perfil deixou de ser
-sobre eneagrama. Usa só as provas do `voice.md`.
+e terapia de casal, formação winnicottiana, e por que o perfil passou do
+eneagrama para a psicanálise. Usa só as provas do `voice.md`. Depende do campo
+"história pessoal" estar preenchido: sem ele, o carrossel fica com cara de
+currículo.
 
 ### Semana 4
 
@@ -91,7 +114,7 @@ sobre eneagrama. Usa só as provas do `voice.md`.
 ### Stories das semanas 3 e 4
 
 - Responder no stories (anonimamente) as perguntas que chegarem pelo TEXTO.
-- Um stories por semana com o seu rosto, falando 15 segundos sobre o post do
+- Um stories por semana com o rosto, falando 15 segundos sobre o post do
   dia. Prepara o público para o Reel com rosto da fase 3.
 - Enquete: "Você já pensou em fazer análise?" Já pensei / Já faço / Nunca.
   Quem responde "já pensei" recebe uma mensagem acolhedora no direct, sem
@@ -113,11 +136,14 @@ palavras-chave (meta da auditoria: 3 por semana).
 | 5 | Qua | Carrossel | "Meu problema é pequeno" (49, 63) | Capa: "Tem gente com problema de verdade. O meu é frescura." |
 | 5 | Sex | Reel (telas) | Já leu tudo (60) | "Para quem já leu tudo sobre ansiedade, e continua ansioso." |
 | 6 | Seg | Reel (telas) | Já fez terapia (58) | "Já fiz terapia e não adiantou." |
-| 6 | Qua | Carrossel | Psicanalista é psicólogo? | Capa: "Psicanalista e psicólogo não são a mesma coisa. Entenda a diferença." |
+| 6 | Qua | Carrossel | Psicanalista e psicólogo | Capa: "Psicanalista e psicólogo: qual é a diferença?" |
 | 6 | Sex | Reel (telas) | Online funciona? (62) | "Atendo online desde 2020. A pergunta que mais ouvi: funciona?" |
 
 O Reel com rosto da semana 5 é o teste que a auditoria sugere para baixar o
 pulo de 59%. Comparar a taxa de pulo dele com a dos Reels de telas.
+
+(Os ganchos 49 e 58 estão entre aspas porque são falas do público. A negação
+ali é da pessoa, e a resposta do post vem afirmativa.)
 
 ---
 
@@ -126,8 +152,7 @@ pulo de 59%. Comparar a taxa de pulo dele com a dos Reels de telas.
 **Objetivo:** abrir a porta. **CTA:** nível 5, uma vez por semana. O resto
 dos posts volta para os níveis 1 a 3, seguindo os pilares.
 
-- **Reel de porta aberta** (com rosto), roteiro da auditoria reescrito pela
-  regra do "você":
+- **Reel de porta aberta** (com rosto, voz do Fabiano do começo ao fim):
   - "Para quem resolve tudo pra todo mundo, e anda num cansaço que nem o sono
     resolve. Eu sou o Fabiano, psicanalista, e atendo adultos online desde
     2020. Muita gente chega na análise com a mesma história: aprendeu cedo
@@ -135,6 +160,8 @@ dos posts volta para os níveis 1 a 3, seguindo os pilares.
     história. Uma vez por semana, online, num espaço só seu. Se isso fez
     sentido, o link pra conversar comigo está na bio. Quando estiver pronto,
     estarei aqui."
+  - Se a história pessoal do `voice.md` estiver preenchida, trocar a frase
+    "Eu sou o Fabiano..." por uma cena dela. É o que dá peso ao convite.
 - **Bio versão 3** ("Novos horários em novembro") na semana do convite.
 - **Sequência de stories de conversão:** enquete → caixinha → stories com o
   rosto → link do WhatsApp.
@@ -149,6 +176,7 @@ dos posts volta para os níveis 1 a 3, seguindo os pilares.
 | Pulo nos 3 primeiros segundos | 59% | abaixo de 45% |
 | Salvamentos + compartilhamentos por post | 0,7 | 5 |
 | Conversas pelas palavras-chave/WhatsApp | 0 | 3/semana no mês 1, 6/semana no mês 3 |
+| Semanas cumpridas no ritmo base | — | todas |
 
 Uma vez por mês: quantas conversas viraram primeira sessão.
 
