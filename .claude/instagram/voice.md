@@ -165,6 +165,18 @@ Em vez disso, a pessoa se reconhece na descrição, sem ser acusada:
 - **Emoji na legenda:** nunca (os três roteiros não têm nenhum). **(confirmar)**
 - **Português:** padrão, cuidadoso, sem gírias.
 
+## Ferramentas em português
+
+As ferramentas originais da skill `ig-reel` (`hookscore.py`, `beats.py`) só
+leem inglês. Para os meus roteiros, usar sempre as versões em português, na
+mesma pasta:
+
+- `python3 hookscore_pt.py ganchos.txt`: nota dos ganchos. Segue a Regra 2
+  (premia "para quem", cena em primeira pessoa e "a gente"; trava "você
+  está/é/se sente...").
+- `python3 beats_pt.py roteiro.txt --target 40`: folha de tempos, a 140
+  palavras por minuto.
+
 ## Formato dos Reels
 
 - **Rosto na câmera:** às vezes. O formato preferido é o Reel de apresentação:
