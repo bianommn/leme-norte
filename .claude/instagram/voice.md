@@ -19,8 +19,68 @@ propostas, não falas originais.
   que ainda não sabe se "o que sente é motivo suficiente" para fazer terapia.
   Recortes que conheço de perto: sofrimento ligado ao trabalho e dificuldades
   na vida a dois. **(confirmar)**
-- **O que eu vendo:** Sessões de psicanálise online (agendamento pelo link da
-  bio).
+- **O que eu vendo:** Análise online, semanal (R$ 480/mês). Agendamento pelo
+  link da bio (WhatsApp com mensagem pronta).
+
+## Posicionamento e público (da auditoria de 23/out/2026)
+
+- **Posicionamento:** psicanalista dos adultos que aprenderam cedo demais a dar
+  conta de tudo.
+- **Público ideal:** a "adulta funcional". Mulher de 28 a 42 anos (cerca de 70%
+  do público; 30% homens), competente, referência para todo mundo, vazia e
+  cansada por dentro. Ensino superior, renda própria, SP/PR/GO/MG. Já fez teste
+  de personalidade, leu sobre autoconhecimento, talvez terapia breve ou
+  coaching que "ajudou mas não chegou na raiz". Desconfia de fórmula e de
+  guru. Consome à noite, depois de pôr a casa em ordem, e compartilha no
+  WhatsApp com amigas.
+- **Cenas podem ser femininas** ("a filha mais velha", "a que resolve") quando
+  o público ideal pede. Alternar com cenas neutras.
+- **Base atual:** 749 seguidores, boa parte herdada do eneagrama. Por isso o
+  perfil está em aquecimento (ver `aquecimento.md`): convite para sessão só a
+  partir da fase 4.
+- **Pilares:** o adulto que dá conta de tudo (30%), relações que se repetem
+  (20%), Conversas de Divã (20%), eneagrama como porta de entrada (15%), por
+  dentro da análise (15%).
+
+## Escada de CTA
+
+Um CTA por post, sempre no nível da fase atual do aquecimento ou abaixo:
+
+1. **Salvar / compartilhar:** "Manda pra quem é o forte da sua família."
+   "Salva pra ler no próximo domingo."
+2. **Responder:** enquete nos stories, comentar uma palavra ou o tipo do
+   eneagrama.
+3. **Palavra-chave que entrega algo, sem vender:** "Comenta TEXTO que eu te
+   mando no direct um texto sobre isso." A conversa começa sem pressão.
+4. **Conhecer:** "Nos destaques tem como funciona a análise comigo."
+5. **Convidar:** "O link para conversar comigo está na bio."
+
+Fechamento fixo, quando couber: "Quando estiver pronto, estarei aqui."
+Nunca caixa alta, nunca ameaça ("SE VOCÊ NÃO SEGUE...").
+
+## Vícios a evitar (da auditoria)
+
+- **A estrutura "não é X, é Y"** ("Você não está cansado. Você está
+  sobrevivendo.") virou tique. No máximo uma vez a cada cinco posts.
+- **Freud, Frankl, Lacan, Jung:** diluem a marca. Se citar alguém, Winnicott.
+- **Carrossel denso de texto:** zero salvamentos em 14 posts. Carrossel agora é
+  lista salvável, checklist ou quadrinho (Conversas de Divã).
+- **Post sem legenda.**
+- **Abrir com apresentação.** O gancho vem na primeira frase (59% pulam o Reel
+  nos 3 primeiros segundos).
+
+## O que já funcionou (usar de novo)
+
+- Cena pessoal com horário exato ("22:47, peguei um livro"): 405
+  visualizações.
+- História de personagem com idade e nome (Dona Maria Lúcia, 70 anos): menor
+  taxa de pulo.
+- Emoção forte (o senhor de 72 anos e o luto): mais tempo assistido e
+  comentários.
+- Frase curta e provocativa (medo e desejo): recorde de salvamentos.
+- Série com promessa clara (série de eneagrama): maior alcance.
+- Personagens fictícios (Conversas de Divã, Paulo, Bruna, Clara), sempre
+  sinalizados como fictícios.
 
 ## Regra 1: sem termos técnicos
 
@@ -90,8 +150,8 @@ Em vez disso, a pessoa se reconhece na descrição, sem ser acusada:
     "benefícios") e falar como numa sessão: uma cena concreta do dia a dia, no
     presente, seguindo a Regra 2.
   - Menos "pode ser que", mais afirmação delicada sobre a experiência (não
-    sobre a pessoa): "Não é o trabalho que cansa. É fingir o dia inteiro que
-    está tudo bem."
+    sobre a pessoa): "Fingir o dia inteiro que está tudo bem cansa mais que
+    o trabalho."
   - Frases mais curtas. Uma ideia por frase.
   - Cada post nasce de uma Dor, um Desejo, uma Crença ou uma Objeção (lista
     abaixo), não de um conceito.
@@ -271,7 +331,10 @@ As skills nunca inventam número ou história. Use só o que está aqui.
 - **Palavra-chave nos comentários, se usar:** `{{ex.: SOZINHO, VAZIO}}`
 - **O que a palavra-chave envia:** `{{...}}`
 - **Para onde vai o link:** agendamento de sessão (link da bio).
-- **CTA padrão, no meu tom:** "Se isso fez sentido para você, saiba que não
+- **CTA de convite (só a partir da fase 4, ver Escada de CTA):** "Se isso fez sentido para você, saiba que não
   precisa atravessar sozinho. O link para agendar uma conversa está na bio."
-- **Hashtags:** três, no máximo (antes eu usava 10). Temáticas e sem jargão,
-  ex.: #psicanalise #saudeemocional #terapiaonline. **(confirmar)**
+- **Hashtags:** 5 por post, de um banco fixo do nicho. Nunca fora do nicho
+  (#postviral, #contasfamosas) nem em letras estilizadas. Banco sugerido:
+  #psicanalise #psicanaliseonline #winnicott #saudeemocional #terapiaonline
+  #autoconhecimento #ansiedade #cansacoemocional #relacionamentos
+  #filhamaisvelha. **(confirmar)**
