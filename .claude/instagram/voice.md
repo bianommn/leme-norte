@@ -123,6 +123,12 @@ Em vez disso, a pessoa se reconhece na descrição, sem ser acusada:
   e o peito aperta." / "Eu sempre dei conta de tudo. Até não dar mais."
 - **"A gente"** para incluir sem acusar: "A gente aprende cedo a não dar
   trabalho."
+- **Uma voz por vídeo.** Se o Reel abre na primeira pessoa do público ("eu
+  resolvo tudo"), segue assim até o fim: a virada é uma descoberta da pessoa
+  ("Eu achava que era personalidade. Não é."), nunca uma explicação de
+  especialista sobre "a criança" ou "ela". A voz do especialista fica na
+  legenda. O CTA na tela entra com visual diferente (estilo figurinha), para
+  não ser lido como fala da personagem.
 - **"Você" continua permitido** só quando não afirma nada sobre o estado da
   pessoa: no CTA ("agende sua sessão"), em convite ("se fizer sentido para
   você") e em instrução ("salve para ler depois").
